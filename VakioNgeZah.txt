@@ -1,0 +1,2 @@
+1) Download le fichier reetra
+2) miasa en localhost ito , nom base de donnée : dbidea 

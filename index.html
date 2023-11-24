@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Libs/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <title>IDEA/Acceuil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <head>
+        <!-- Inclure les styles CSS de Slick Carousel -->
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+        <!-- Inclure jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- Inclure le script JS de Slick Carousel -->
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    </head>
+
+<body>
+    <!-- Ajout du preloader -->
+    <div class="preloader-container">
+        <div class="preloader">
+            <div class="line shorter first"></div>
+            <div class="line longer second"></div>
+            <div class="line shorter third"></div>
+        </div>
+    </div>
+    <!-- Votre contenu HTML continue -->
+
+    <!-- JavaScript pour masquer le preloader après le chargement de la page -->
+    <script>
+        // Sélectionnez le preloader
+        const preloader = document.querySelector('.preloader');
+        const preloaderContainer = document.querySelector('.preloader-container');
+
+        // Enregistrez le temps actuel
+        const startTime = new Date().getTime();
+
+        // Attendez que le DOM soit chargé
+        document.addEventListener('DOMContentLoaded', () => {
+            // Calculez la durée de chargement de la page
+            const endTime = new Date().getTime();
+            const loadTime = endTime - startTime;
+
+            // Attendez un certain temps basé sur la durée de chargement de la page avant de cacher le preloader
+            setTimeout(() => {
+                preloader.classList.add('hidden');
+
+                // Retirez le fond blanc après la disparition du preloader
+                setTimeout(() => {
+                    preloaderContainer.style.backgroundColor = 'transparent';
+                }, 500); // Temps d'attente en millisecondes avant de retirer le fond blanc
+            }, loadTime); // Attente basée sur la durée de chargement de la page
+        });
+    </script>
+
+
+
+
+    <!--debut En tete -->
+
+    <div>
+        <video class="background-video" autoplay loop muted>
+            <source src="assets/medias/video_back.mp4" type="video/mp4">
+        </video>
+
+        <div class="theme-switch">
+            <a href="#"><i class="fas fa-adjust"></i></a>
+        </div>
+
+        <div class="icon-container">
+            <div class="ic-principal">
+                <img src="assets/medias/ajouter-white.png">
+
+
+                <div class="ic-secondaire">
+                    <a href="index.html">
+                        <img src="assets/medias/1.png">
+                        <p>ACCUEIL</p>
+                    </a>
+
+                    <a href="articles.html">
+                        <img src="assets/medias/2.png">
+                        <p>ARTICLES</p>
+                    </a>
+
+                    <a href="services.html">
+                        <img src="assets/medias/3.png">
+                        <p>SERVICES</p>
+                    </a>
+
+                    <a href="about.html">
+                        <img src="assets/medias/4.png">
+                        <p>APROPOS</p>
+                    </a>
+
+                    <a href="contact.html">
+                        <img src="assets/medias/5.png">
+                        <p>CONTACT</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner">
+            <div id="carouselExample" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h1>IMPULSE</h1>
+                        <p>Nous vous souhaitons la bienvenue Nous vous souhaitons la bienvenue</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>DIGITAL</h1>
+                        <p>Nous vous souhaitons la bienvenue Nous vous souhaitons la bienvenue</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>EXPERIENCE</h1>
+                        <p>permet un bon visuel et une facilite de navigation</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>AGENCY</h1>
+                        <p>permet un bon visuel et une facilite de navigation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fin en tete -->
+
+        <!-- BULLES -->
+        <div class="social-icon">
+            <a href="#"><img src="assets/medias/facebook.png"></a>
+            <a href="#"><img src="assets/medias/twitter.png"></a>
+            <a href="#"><img src="assets/medias/instagram.png"></a>
+            <a href="#"><img src="assets/medias/skype.png"></a>
+        </div>
+        <!-- fin BULLES -->
+
+        <div class="center-line"></div>
+        <div class="point"><img src="assets/medias/lighting.png"></div>
+        <script>
+            const point = document.querySelector(".point");
+            const centerLine = document.querySelector(".center-line");
+
+            // Fonction pour mettre à jour la position du point lumineux
+            function updatePointPosition() {
+                const scrollY = window.scrollY;
+                const centerY = window.innerHeight / 2;
+                point.style.top = (scrollY + centerY) + "px";
+                requestAnimationFrame(updatePointPosition);
+            }
+
+            updatePointPosition(); // Démarre la mise à jour de la position
+
+        // Ajustez la couleur et d'autres styles du point lumineux ici
+        </script>
+
+        <!-- debut menu services -->
+
+        <div class="menu_services">
+            <div class="image-box">
+                <img src="assets/medias/laptop-2443052_1920.jpg" alt="Image 1">
+                <a href="creation_site_web.html">
+                    <div class="image-title">Creation site web</div>
+                </a>
+            </div>
+            <div class="image-box">
+                <img src="assets/medias/geometric-3045402_1920.png" alt="Image 2">
+                <a href="conception_graphique_digital.html">
+                    <div class="image-title">Conception Graphique Digitale</div>
+                </a>
+            </div>
+            <div class="image-box">
+                <img src="assets/medias/bag-1245954_1920.jpg" alt="Image 3">
+                <a href="assistance-gestion.html">
+                    <div class="image-title">Assistance/Gestion</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="menu_textes">
+            <p> BESOIN D`UNE STRATEGIE NUMERIQUE AFIN D`ATTEINDRE VOS OBJECTIFS MARKETING ET BUSINESS?<br>
+                Nous sommes la pour vous aider a faire passer vos projets au niveau superieur!</p>
+        </div>
+        <!-- fin menu services -->
+
+        <!-- debut box menu -->
+
+        <div class="box-container">
+
+            <div class="box" id="box1">
+                <h2 class="box1-title">Assistance virtuelle</h2>
+                <div class="box1-content">
+                    <p>Les entreprises se tournent de plus en plus vers les assistants virtuels: En effet, les nouvelles
+                        technologies de l`information et de la communication offrent de nombreuses opportunites pour
+                        diriger son entreprise et gagner en flexibilite.</p>
+                </div>
+                <div class="box-video">
+                    <video autoplay loop muted>
+                        <source src="assets/medias/202209235_4000.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="box" id="box2">
+                <div class="box2-image">
+                    <img src="assets/medias/202855452_l.jpg" alt="Image de la Box 2">
+                </div>
+                <h2 class="box2-title">Conception Digitale</h2>
+                <div class="box2-content">
+                    <p>Laissez nous vous accompagner dans votre stratégie digitale, à travers la création de sites
+                        internet & applications mobiles optimisés pour l’utilisateur, la valorisation de vos designs et
+                        la mise en place de dispositifs webmarketing performants</p>
+                </div>
+            </div>
+
+            <div class="box " id="box3">
+                <h2 class="box3-title">Social Media Manager</h2>
+                <div class="box3-content">
+                    <p>Vous ne disposez pas des ressources nécessaires ou vous n’avez simplement pas le temps de vous
+                        occuper de la gestion de vos réseaux sociaux ? Confiez la gestion de votre présence sur les
+                        médias sociaux, à notre Community Manager.
+                        Nous vous accompagnons à toutes les étapes de votre déploiement sur les réseaux sociaux pour que
+                        votre communication et vos actions marketing Social Media vous génèrent le meilleur retour sur
+                        investissement. Notre but est que vous puissiez déployer votre marque sur les réseaux sociaux
+                        pour faire grandir votre communauté, toucher une audience large et précise à la fois, engager
+                        vos publics avec des contenus pertinents, créatifs et qui véhiculent vos messages de
+                        communication...</p>
+                </div>
+                <div class="box3-image">
+                    <img src="assets/medias/190906218_l.jpg" alt="Image de la Box 3">
+                </div>
+            </div>
+
+
+            <div class="box " id="box4">
+                <h2 class="box4-title">Creer votre site internet</h2>
+                <div class="box4-content">
+                    <p>Vous souhaitez créer un site internet pour être présent sur les moteurs de recherche, pour
+                        accentuez votre crédibilité et celle de votre entreprise ? <br>
+                        Vous êtes au bon endroit ! Transmettez vos messages à travers des campagnes de communication
+                        adaptées.</p>
+                </div>
+                <div class="box-image">
+                    <img src="assets/medias/stock-image-150927082-L.jpg">
+                </div>
+                <div class="timeline">
+                    <div class="timeline-event T1">
+                        <div class="timeline-icon">
+                            <i class="fas fa-icon"><img src="assets/medias/box3-1.png"></i>
+                        </div>
+                        <h3 class="timeline-title">Analyse</h3>
+                    </div>
+                    <div class="timeline-event T2">
+                        <div class="timeline-icon">
+                            <i class="fas fa-icon"><img src="assets/medias/box3-2.png"></i>
+                        </div>
+                        <h3 class="timeline-title">Strategie</h3>
+                    </div>
+                    <div class="timeline-event T3">
+                        <div class="timeline-icon">
+                            <i class="fas fa-icon"><img src="assets/medias/box3-3.png"></i>
+                        </div>
+                        <h3 class="timeline-title">Creation du site web</h3>
+                    </div>
+                    <div class="timeline-event T4">
+                        <div class="timeline-icon">
+                            <i class="fas fa-icon"><img src="assets/medias/box3-4.png"></i>
+                        </div>
+                        <h3 class="timeline-title">Implementation</h3>
+                    </div>
+                    <div class="timeline-event T5">
+                        <div class="timeline-icon">
+                            <i class="fas fa-icon"><img src="assets/medias/box3-5.png"></i>
+                        </div>
+                        <h3 class="timeline-title">Optimisation</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- fin box menu -->
+
+        <div class="blog-section">
+            <h2 class="section-title">Blog & Actus</h2>
+            <hr class="section-divider">
+            <p class="section-paragraph">Bienvenue sur notre blog et nos actualités. Découvrez les dernières
+                informations et mises à jour ici.</p>
+            <div class="box-container2">
+                <div class="blog-box">
+                    <img src="assets/medias/396530042_737383088407879_6697849920658171849_n.jpg" alt="Image 1">
+                    <p>Partenariat entre IDEA et DISCIPLES FC-FF</p>
+                    <button class="read-more-button">Lire la suite</button>
+                </div>
+                <div class="blog-box">
+                    <p>Marketing communication<br>
+                        •Qu’est-ce que la communication digitale ?<br>
+
+                        •L’objectif ?<br>
+
+                        •Stratégie de communication digitale sur les médias sociaux<br>
+
+                        •Le développement du contenu de marque<br>
+
+                        •Communication ou Marketing ?</p>
+                    <button class="read-more-button">Lire la suite</button>
+                </div>
+                <div class="blog-box">
+                    <img src="assets/medias/MarTech-v2-scaled.jpg" alt="Image 3">
+                    <p>Chronophage processus :<br>
+                        •Des solutions pour réduire les activités chronophages</p>
+                    <button class="read-more-button">Lire la suite</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- debut about section -->
+        <div class="main-box">
+            <h1 class="main-title">IDEA</h1>
+
+
+
+
+            <div class="sub-box sub1">
+                <h2 class="sub-title">A propos de nous</h2>
+                <p>Impulse Digital Experience Agency est une agence de communication, markrting digital, développement
+                    web et multiservice à l'international. Nous mettons en place des stratégies personnalisées afin
+                    d'obtenir des solutions adéquates st éfficaces pour répondre aux attentes des entreprises et entités
+                    avec lesquelles nous travaillons Une implication totale pour obtenir des résultats et emmener nos
+                    collaborateurs à un niveau supérieur.</p>
+                <div class="bottom-box">
+                    <img src="assets/medias/plus.png" alt="Icône" onclick="toggleBottomBoxParagraphs()">
+                </div>
+
+            </div>
+
+            <div class="sub-box about-image">
+                <img src="assets/medias/about-image.jpg" alt="Image">
+            </div>
+
+            <div class="bottom-box">
+
+
+                <div class="paragraphs hidden" id="bottomBoxParagraphs">
+                    <p>Parce que nous voulons ce que vous voulez. Nous mettons au service de vos projets notre
+                        expertise, nos valeurs et notre philosophie.
+
+                        Philosophie :
+                        Parce que nous sommes avant tout des êtres humains, nous nous mettons à votre place.
+                        Notre première mission consiste à installer un climat de confiance, sans laquelle nous ne
+                        saurions travailler, et à vous en apprendre plus sur nous et nos valeurs.
+                        Compréhension
+                        Nous grandissons à travers les projets confiés. C’est pourquoi nous faisons preuve d’une écoute
+                        attentive à vos besoins, afin de comprendre votre personnalité et celle de votre entreprise.
+                        Exigence
+                        Le résultat ne doit pas seulement être le parfait reflet de vos idées. Il est conjointement
+                        construit par un accompagnement constant tout du long de votre projet et de propositions
+                        adéquates. C’est notre expérience et cette volonté d’épanouissement, dans le domaine du
+                        numérique, qui nous permet de vous proposer les stratégies digitales les mieux adaptées.
+                        Fiabilité
+                        Parce que cet accompagnement ne s’arrête pas au lancement de votre projet. Notre démarche
+                        d’amélioration continue nous pousse à sans cesse revoir nos processus et à suivre l’évolution de
+                        vos objectifs, en vous apportant support et optimisation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin about section -->
+
+
+    <div class="avis-section">
+        <h2>Donner un avis</h2>
+        <div class="etoiles" id="etoiles">
+            <span class="etoile" data-id="1" data-rating="1">&#9733;</span>
+            <span class="etoile" data-id="2" data-rating="2">&#9733;</span>
+            <span class="etoile" data-id="3" data-rating="3">&#9733;</span>
+            <span class="etoile" data-id="4" data-rating="4">&#9733;</span>
+            <span class="etoile" data-id="5" data-rating="5">&#9733;</span>
+        </div>
+        <div class="avis-form" id="avisForm">
+            <form method="POST" action="traitement_avis.php">
+                <!-- Ajout du champ caché pour la note sélectionnée -->
+                <input type="hidden" id="ratingInput" name="rating" value="">
+                
+                <label for="avisText">Votre avis :</label>
+                <textarea id="avisText" name="avisText"></textarea>
+                <label for="auteur">Votre nom :</label>
+                <input type="text" id="auteur" name="auteur">
+                <button type="submit" id="submitBtn">Soumettre</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <input type="email" class="email-bar" placeholder="Votre adresse email">
+        <br>
+        <button class="contact-button">Nous Contacter</button>
+        <br>
+        <div class="email-icon">&#9993;</div>
+        <div class="email-address">e-idea@outlook.com</div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+    </div>
+    <p>&copy; Nom. Tous droits réservés.</p>
+    <script src="assets/js/subtitle.js"></script>
+    <script src="assets/js/ic_bottombox.js"></script>
+    <script src="assets/js/avis.js"></script>
+    <script src="assets/js/opacity.js"></script>
+
+</body>
+
+</html>
